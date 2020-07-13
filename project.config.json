@@ -14,8 +14,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wxc4edd9fbc52f80b3",
-	"projectname": "theCreativesDirectory",
+	"appid": "touristappid",
+	"projectname": "theCreativesDirector",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
