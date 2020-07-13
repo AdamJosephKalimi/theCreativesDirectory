@@ -60,8 +60,11 @@
 .arrow-icon{
   height: 25px;
   width: 25px;
-  margin-bottom: -6px;
   margin-left: 10px;
+}
+
+.download-wrapper{
+  display: flex;
 }
 
 .button-style-d{

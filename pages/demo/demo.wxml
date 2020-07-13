@@ -5,7 +5,7 @@
 <view style="height: 10px;"></view>
 <button class="button-style-b">Contact</button>
 <view style="height: 10px;"></view>
-<view>
+<view class="download-wrapper">
 <navigator class="button-style-c" url="#">Download portfolio</navigator>
 <image class="arrow-icon" src= "arrow-icon.svg"></image>
 </view>
