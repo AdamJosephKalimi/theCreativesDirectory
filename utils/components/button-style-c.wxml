@@ -1,0 +1,4 @@
+<view>
+<navigator class="button-style-c" url="#">Download portfolio</navigator>
+<image class="arrow-icon" src= "arrow-icon.svg"></image>
+</view>

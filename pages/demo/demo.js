@@ -1,3 +1,4 @@
+const loadFonts = require("../../utils/fonts.js")
 // pages/demo/demo.js
 Page({
 
@@ -12,7 +13,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    loadFonts()
   },
 
   /**

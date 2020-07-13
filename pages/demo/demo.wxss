@@ -1,1 +1,119 @@
-/* pages/demo/demo.wxss */
+.button-style-a-active{
+  font-family: "Less Bold";
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-style-a-normal{
+  font-family: "Less";
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button-style-b{
+  font-family: "NewYork Black";
+  font-size: 25px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.button-style-c{
+  display: inline-block;
+  font-family: "NewYork Black";
+  font-size: 20px;
+}
+
+.arrow-icon{
+  height: 25px;
+  width: 25px;
+  margin-bottom: -6px;
+  margin-left: 10px;
+}
+
+.button-style-d{
+  display: inline-block;
+  text-decoration: underline;
+  font-family: "NewYork Black";
+  font-size: 20px;
+}
+
+.copy-icon-style-d{
+  height: 25px;
+  width: 25px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.button-style-e{
+  display: inline-block;
+  font-family: "NewYork Medium";
+  font-size: 20px;
+}
+
+.copy-icon-style-e{
+  height: 20px;
+  width: 20px;
+  margin-bottom: 7px;
+  margin-left: 2px;
+}
+
+.button-style-f-active{
+  width: 160px;
+  text-align: center;
+  font-family: "NewYork";
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.button-style-f-inactive{
+  width: 160px;
+  color: rgb(180,180,180);
+  font-family: "NewYork";
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid rgb(170,170,170);
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.button-style-g{
+  font-family: "NewYork";
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
