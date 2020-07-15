@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/home-directory/home-directory",
     "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs"

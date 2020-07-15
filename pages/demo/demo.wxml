@@ -28,4 +28,15 @@
 <navigator class="button-style-g" url="#">Contact Us</navigator>
 <view style="height: 10px;"></view>
 <button class="button-style-h">Delete</button>
+<view style="height: 10px;"></view>
+<view class="card-body">
+<view class="card-head">
+<image class="profile-picture" src= "/assets/sample-profile1.png"></image>
+<view class="card-head-text">
+<text class="card-title">Julie Russel</text>
+<text class="card-tags">Graphic Designer / UI/UX / Web Developer</text>
+</view>
+</view>
+<text class="card-description">A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.</text>
+</view>
 </view>
