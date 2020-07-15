@@ -1,4 +1,4 @@
 <view>
 <navigator class="button-style-d" url="#">julie-russel224</navigator>
-<image class="copy-icon-style-d" src= "copy-icon.svg"></image>
+<image class="copy-icon-style-d" src= "/Assets/copy-icon.svg"></image>
 </view>

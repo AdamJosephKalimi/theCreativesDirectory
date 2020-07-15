@@ -7,17 +7,17 @@
 <view style="height: 10px;"></view>
 <view class="download-wrapper">
 <navigator class="button-style-c" url="#">Download portfolio</navigator>
-<image class="arrow-icon" src= "arrow-icon.svg"></image>
+<image class="arrow-icon" src= "/Assets/arrow-icon.svg"></image>
 </view>
 <view style="height: 10px;"></view>
 <view>
 <navigator class="button-style-d" url="#">julie-russel224</navigator>
-<image class="copy-icon-style-d" src= "copy-icon.svg"></image>
+<image class="copy-icon-style-d" src= "/Assets/copy-icon.svg"></image>
 </view>
 <view style="height: 10px;"></view>
 <view>
 <navigator class="button-style-e" url="#">See more: www.juliestudios.com</navigator>
-<image class="copy-icon-style-e" src= "copy-icon.svg"></image>
+<image class="copy-icon-style-e" src= "/Assets/copy-icon.svg"></image>
 </view>
 <view style="height: 10px;"></view>
 <button class="button-style-f-active">Web dev.</button>

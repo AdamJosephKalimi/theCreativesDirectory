@@ -1,4 +1,4 @@
 <view>
 <navigator class="button-style-e" url="#">See more: www.juliestudios.com</navigator>
-<image class="copy-icon-style-e" src= "copy-icon.svg"></image>
+<image class="copy-icon-style-e" src= "/Assets/copy-icon.svg"></image>
 </view>
