@@ -1,4 +1,5 @@
 // pages/home-directory/home-directory.js
+const loadFonts = require("../../utils/fonts.js")
 Page({
 
   /**
@@ -32,6 +33,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    loadFonts()
 
   },
 
