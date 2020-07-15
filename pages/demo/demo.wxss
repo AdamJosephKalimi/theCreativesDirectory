@@ -109,6 +109,13 @@
 }
 
 .button-style-g{
+  font-family: "NewYork Medium";
+  display: inline-block;
+  line-height: 1;
+  font-size: 25px;
+}
+
+.button-style-h{
   font-family: "NewYork";
   background-color: white;
   border: 1px solid black;

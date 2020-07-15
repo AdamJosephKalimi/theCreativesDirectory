@@ -24,5 +24,8 @@
 <view style="height: 10px;"></view>
 <button class="button-style-f-inactive">Videography</button>
 <view style="height: 10px;"></view>
-<button class="button-style-g">Delete</button>
+<navigator class="button-style-g" url="#">Download my portfolio</navigator>
+<navigator class="button-style-g" url="#">Contact Us</navigator>
+<view style="height: 10px;"></view>
+<button class="button-style-h">Delete</button>
 </view>
