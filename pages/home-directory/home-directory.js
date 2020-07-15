@@ -25,7 +25,8 @@ Page({
         creativeAreas: ["Branding", "Consulting", "Art Direction"],
         bio: "Creating distinct worlds and exploring how a brand thinks, feels, and behaves. This includes identity systems, content creation and all the materials..."
       }
-    ]
+    ],
+    currentUser: "John"
 
   },
 

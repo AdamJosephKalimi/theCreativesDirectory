@@ -9,6 +9,7 @@
 }
 
 .card-body{
+  display: block;
   background-color: white;
   padding: 40rpx;
   margin-bottom: 30rpx;
@@ -36,4 +37,62 @@
   display: block;
   margin-top: 20rpx;
   font-family: "Less";
+}
+
+.card-wrapper{
+  background-color: rgb(246, 243, 239);
+  padding-top: 80rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.home-head{
+  font-size: 60rpx;
+  font-family: "NewYork Black";
+  line-height: 1.2;
+}
+
+.home-subhead{
+  line-height: 1.2;
+  font-size: 60rpx;
+  font-family: "NewYork Medium";
+  margin-bottom: 60rpx;
+  display: block;
+
+}
+
+.line{
+  margin-bottom: 60rpx;
+  height: 10rpx;
+  background-color: black;
+  width: 100%;
+}
+
+.button-style-a-active{
+  font-family: "Less Bold";
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.button-style-a-normal{
+  font-family: "Less";
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30rpx;
 }

@@ -1,10 +1,3 @@
-<view class="card-wrapper">
-<view class="line"></view>
-<text class="home-head">Welcome,\n</text>
-<text class="home-subhead">{{currentUser}}</text>
-<button class="button-style-a-active">Browse all</button>
-<button class="button-style-a-normal">Filter by creative area</button>
-<block wx:for="{{usersDB}}" wx:for-item="user">
 <view class="card-body">
 <view class="card-head">
 <image class="profile-picture" src= "{{user.profilePhoto}}"></image>
@@ -22,6 +15,4 @@
 </view>
 </view>
 <text class="card-description">{{user.bio}}</text>
-</view>
-</block>
 </view>

@@ -140,3 +140,71 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.profile-picture{
+  object-fit: fill;
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.card-body{
+  display: block;
+  background-color: white;
+  padding: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.card-head{
+  height: 160rpx;
+}
+
+.card-head-text{
+  margin-left: 190rpx;
+}
+.card-title{
+  font-size: 50rpx;
+  font-family: "NewYork Medium";
+}
+
+.card-tags{
+  font-size: 28rpx;
+  font-family: "NewYork";
+  line-height: 1.4;
+}
+
+.card-description{
+  display: block;
+  margin-top: 20rpx;
+  font-family: "Less";
+}
+
+.card-wrapper{
+  background-color: rgb(246, 243, 239);
+  padding-top: 80rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.home-head{
+  font-size: 60rpx;
+  font-family: "NewYork Black";
+  line-height: 1.2;
+}
+
+.home-subhead{
+  line-height: 1.2;
+  font-size: 60rpx;
+  font-family: "NewYork Medium";
+  margin-bottom: 60rpx;
+  display: block;
+
+}
+
+.line{
+  margin-bottom: 60rpx;
+  height: 10rpx;
+  background-color: black;
+  width: 100%;
+}
