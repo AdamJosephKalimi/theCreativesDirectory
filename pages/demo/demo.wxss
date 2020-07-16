@@ -1,3 +1,4 @@
+@import "../../fonts/fonts.wxss";
 .button-style-a-active{
   font-family: "Less Bold";
   background-color: white;
@@ -169,6 +170,7 @@
 
 .card-description{
   display: block;
+  line-height: 1.4;
   margin-top: 24rpx;
   font-size: 24rpx;
   font-family: "Less";
