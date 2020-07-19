@@ -1,3 +1,4 @@
+<!-- This class should be renamed to "Page wrapper" instead of card wrapper -->
 <view class="card-wrapper">
   <view class="line"></view>
   <text class="home-head">Welcome\n</text>
