@@ -1,15 +1,16 @@
 {
-  "pages":[
-    "pages/home-directory/home-directory",
-    "pages/demo/demo",
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/portfolio-filled/portfolio-filled",
+        "pages/home-directory/home-directory",
+        "pages/demo/demo",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
 }
