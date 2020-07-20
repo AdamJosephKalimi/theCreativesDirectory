@@ -1,0 +1,29 @@
+<!-- This class should be renamed to "Page wrapper" instead of card wrapper -->
+<view class="card-wrapper">
+  <view class="line"></view>
+  <text class="home-head">Welcome\n</text>
+  <!-- <text class="home-subhead">{{currentUser}}</text> !-->
+  <view style="margin-top: 64rpx;">
+    <button class="button-style-a-active">Browse all</button>
+    <button class="button-style-a-normal">Filter by creative area</button>
+  </view>
+  <block wx:for="{{usersDB}}" wx:for-item="user">
+      <view class="card-body">
+        <view class="card-head">
+            <image class="profile-picture" src= "{{user.profilePhoto}}"></image>
+            <view class="card-head-text">
+            <text class="card-title">{{user.name}}</text>
+          <block wx:for="{{user.creativeAreas}}" wx:for-index="idx">
+            <block wx:if="{{idx < user.creativeAreas.length-1}}">
+              <text decode="true" class="card-tags">{{item}} /&nbsp;</text>
+            </block>
+            <block wx:else>
+              <text class="card-tags">{{item}}</text>
+            </block>
+          </block>
+        </view>
+      </view>
+    <text class="card-description">{{user.bio}}</text>
+    </view>
+  </block>
+</view>

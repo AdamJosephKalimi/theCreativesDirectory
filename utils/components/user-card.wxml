@@ -1,0 +1,17 @@
+      <view class="card-body">
+        <view class="card-head">
+            <image class="profile-picture" src= "{{user.profilePhoto}}"></image>
+            <view class="card-head-text">
+            <text class="card-title">{{user.name}}</text>
+          <block wx:for="{{user.creativeAreas}}" wx:for-index="idx">
+            <block wx:if="{{idx < user.creativeAreas.length-1}}">
+              <text decode="true" class="card-tags">{{item}} /&nbsp;</text>
+            </block>
+            <block wx:else>
+              <text class="card-tags">{{item}}</text>
+            </block>
+          </block>
+        </view>
+      </view>
+    <text class="card-description">{{user.bio}}</text>
+    </view>

@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/home-directory/home-directory",
+    "pages/demo/demo",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -9,6 +11,5 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,43 @@
+<!-- Indentation of this page needs to be fixed -->
+<view class="container">
+<button class="button-style-a-active">Browse all</button>
+<view style="height: 10px;"></view>
+<button class="button-style-a-normal">Filter by creative area</button>
+<view style="height: 10px;"></view>
+<button class="button-style-b">Contact</button>
+<view style="height: 10px;"></view>
+<view class="download-wrapper">
+<navigator class="button-style-c" url="#">Download portfolio</navigator>
+<image class="arrow-icon" src= "/assets/arrow-icon.svg"></image>
+</view>
+<view style="height: 10px;"></view>
+<view>
+<navigator class="button-style-d" url="#">julie-russel224</navigator>
+<image class="copy-icon-style-d" src= "/assets/copy-icon.svg"></image>
+</view>
+<view style="height: 10px;"></view>
+<view>
+<navigator class="button-style-e" url="#">See more: www.juliestudios.com</navigator>
+<image class="copy-icon-style-e" src= "/assets/copy-icon.svg"></image>
+</view>
+<view style="height: 10px;"></view>
+<button class="button-style-f-active">Web dev.</button>
+<view style="height: 10px;"></view>
+<button class="button-style-f-inactive">Videography</button>
+<view style="height: 10px;"></view>
+<navigator class="button-style-g" url="#">Download my portfolio</navigator>
+<navigator class="button-style-g" url="#">Contact Us</navigator>
+<view style="height: 10px;"></view>
+<button class="button-style-h">Delete</button>
+<view style="height: 10px;"></view>
+<view class="card-body">
+<view class="card-head">
+<image class="profile-picture" src= "/assets/sample-profile1.png"></image>
+<view class="card-head-text">
+<text class="card-title">Julie Russel</text>
+<text class="card-tags">Graphic Designer / UI/UX / Web Developer / Art Director / Project Director</text>
+</view>
+</view>
+<text class="card-description">A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.</text>
+</view>
+</view>

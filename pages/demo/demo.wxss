@@ -1,17 +1,4 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-  background-color: rgb(246, 243, 239);
-} 
-
-/* Button Components */
-/*
+@import "../../fonts/fonts.wxss";
 .button-style-a-active{
   font-family: "Less Bold";
   background-color: white;
@@ -141,10 +128,8 @@
   padding-left: 30px;
   padding-right: 30px;
 }
-*/
 
-/* Card components */
-/*
+/* pages/home-directory/home-directory.wxss */
 
 .profile-picture{
   height: 110rpx;
@@ -251,5 +236,3 @@
   padding-right: 32rpx;
   margin-bottom: 24rpx;
 }
-
-*/
