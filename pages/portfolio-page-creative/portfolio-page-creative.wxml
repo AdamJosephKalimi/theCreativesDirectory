@@ -1,0 +1,38 @@
+<view class="portfolio-wrapper">
+  <view class="line"></view>
+  <navigator class="button-style-g" url="#">Contact</navigator>
+  <text class="username">{{userDB.name}}</text>
+  <block wx:for="{{userDB.tags}}" wx:for-index="idx">
+    <block wx:if="{{idx < userDB.tags.length-1}}">
+      <text decode="true" class="tags">{{item}} /&nbsp;</text>
+    </block>
+    <block wx:else>
+      <text class="tags">{{item}}</text>
+    </block>
+  </block>
+  <text class="location">Based in <text class="bold">{{userDB.location}}</text></text>
+  <image class="profile-image" src="{{userDB.profileImg}}"></image>
+  <text class="description">{{userDB.description}}
+  </text>
+  <view class="line-thin"></view>
+  <view class="portfolio-image-wrapper">
+    <block wx:for="{{userDB.portfolio}}" wx:for-index="idx">
+      <view class="portfolio-image">
+        <image style="width: 100%;" mode="widthFix" src="{{item}}"></image>
+        <image class="vertical-dots" mode="widthFix" src="/assets/vertical-dots.png" bindtap="showHideDelete" data-number="{{idx}}"></image>
+        <button style="display: {{deleteButtonDisplay[idx]}}" class="delete-button">Delete</button>
+      </view>
+    </block>
+  </view>
+  <view class="line-thin"></view>
+    <view>
+      <navigator class="button-style-e" url="#">See more: {{userDB.website}}</navigator>
+    <image class="copy-icon-style-e" src= "/assets/copy-icon.svg"></image>
+    </view>
+    <view class="download-wrapper">
+      <navigator class="button-style-c" url="#">Download portfolio</navigator>
+      <image class="arrow-icon" src= "/assets/arrow-icon.svg"></image>
+    </view>
+</view>
+
+

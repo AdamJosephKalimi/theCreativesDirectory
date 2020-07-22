@@ -1,0 +1,148 @@
+@import "../../fonts/fonts.wxss";
+.portfolio-wrapper{
+  background-color: rgb(246, 243, 239);
+  padding-top: 40rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+}
+.profile-icon{
+  position: absolute;
+  z-index: 1000;
+  top: 40rpx;
+  left: 626rpx;
+  height: 64rpx;
+  width: 64rpx;
+}
+
+.line {
+  margin-top: 100rpx;
+  margin-bottom: 32rpx;
+  height: 10rpx;
+  background-color: black;
+  width: 100%;
+}
+
+.button-style-g {
+  position: fixed;
+  top: 1080rpx;
+  left: 500rpx;
+  z-index: 1000;
+  border: 1px solid black;
+  background-color: white;
+  font-family: "NewYork Black";
+  display: inline-block;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  padding-right: 24rpx;
+  padding-left: 24rpx;
+  line-height: 1;
+  font-size: 44rpx;
+}
+
+.username{
+  display: block;
+  font-family: "NewYork Black";
+  font-size: 68rpx;
+  margin-bottom: 24rpx;
+}
+
+.tags{
+  display: inline-block;
+  font-size: 32rpx;
+  font-family: "NewYork";
+}
+.location{
+  display: block;
+  font-family: "NewYork";
+  margin-bottom: 48rpx;
+}
+
+.bold{
+  font-family: "NewYork Medium";
+}
+
+.profile-image{
+  display: block;
+  height: 206rpx;
+  width: 206rpx;
+  border-radius: 50%;
+  margin-bottom: 64rpx;
+}
+
+.description{
+  display: block;
+  margin-bottom: 40rpx;
+  font-family: "Less";
+  font-size: 32rpx;
+}
+
+.line-thin{
+  height: 4rpx;
+  background-color: black;
+  width: 100%;
+}
+
+.portfolio-image-wrapper{
+  padding-top: 74rpx;
+}
+
+.portfolio-image{
+  position: relative;
+  margin-bottom: 24rpx;
+}
+
+.vertical-dots{
+  position: absolute;
+  top: 20rpx;
+  left: 606rpx;
+  height: 52rpx;
+  width: 12rpx;
+}
+
+.delete-button{
+  position: absolute;
+  top: 20rpx;
+  left: 385rpx;
+  line-height: 1;
+  font-family: "NewYork";
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: inline-block;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  padding-left: 52rpx;
+  padding-right: 52rpx;
+}
+
+.button-style-e {
+  margin-top: 60rpx;
+  display: inline-block;
+  font-family: "NewYork";
+  font-size: 36rpx;
+  padding-bottom: 20rpx;
+}
+
+.copy-icon-style-e {
+  height: 36rpx;
+  width: 36rpx;
+  margin-bottom: 14rpx;
+  margin-left: 4rpx;
+}
+
+.download-wrapper {
+  display: flex;
+}
+
+.button-style-c {
+  display: inline-block;
+  font-family: "NewYork Black";
+  font-size: 44rpx;
+  padding-bottom: 182rpx;
+}
+
+.arrow-icon {
+  height: 55rpx;
+  width: 55rpx;
+  margin-left: 20rpx;
+}
