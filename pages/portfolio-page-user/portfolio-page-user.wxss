@@ -132,11 +132,20 @@
 }
 
 .sideNav{
+  position: absolute;
+  z-index: 1040;
   height: 100vh;
   width: 500rpx; 
   background-color: rgb(240,241,242);
   padding: 60rpx;
+  margin-left: 760rpx;
+  transition: 0.4s ease;
 }
+
+.open{
+  margin-left: 130rpx;
+}
+
 
 .empty-profile-image{
   width: 280rpx;
@@ -178,16 +187,13 @@
   border-radius: 0;
   padding-bottom: 16rpx;
   padding-bottom: 16rpx;
+  margin: 0;
 }
 
 .right-ca-button{
   margin-left: 8rpx;
 }
 
-.two-button-wrapper{
-  height: 60rpx;
-  margin-bottom: 12rpx;
-}
 
 .upload-pdf{
   line-height:1;
@@ -209,7 +215,7 @@
 .save-button{
   margin-top: 30rpx;
   margin-bottom: 30rpx;
-  width: 100%;
+  width: 220rpx;
   background-color: transparent;
   border: black 1px solid;
  font-family: "NewYork Black";
@@ -220,4 +226,48 @@
  padding-right: 50rpx;
  padding-left: 50rpx;
  line-height: 1;
+ margin-left: 500;
+ margin-right: 0;
+}
+
+.delete-portfolio-button{
+  display: inline-block;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  padding: 0;
+  background-color: transparent;
+ font-family: "NewYork";
+ border: none;
+ text-align: left;
+ padding-top: 8rpx;
+ border-radius: 0;
+ line-height: 1;
+ margin-right: 0;
+ width: 300rpx;
+ background-color: transparent;
+}
+
+.delete-portfolio-button::after{
+  border: none;
+}
+
+.contact-portfolio-button{
+  display: inline-block;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  padding: 0;
+  background-color: transparent;
+ font-family: "NewYork";
+ border: none;
+ padding-top: 8rpx;
+ border-radius: 0;
+ line-height: 1;
+ margin-left: 66rpx;
+ background-color: transparent;
+}
+
+.contact-portfolio-button::after{
+  border: none;
 }

@@ -5,6 +5,7 @@ Page({
    * Page initial data
    */
   data: {
+    expandNav: "",
     //there are five "none"s because the maximum number of images that will show is five
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
     userDB: {
@@ -17,7 +18,6 @@ Page({
       description: "A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.",
       portfolio: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"]
     },
-    moveNav: ""
   },
   showHideDelete: function(e){
     //get number from data-number
@@ -34,6 +34,15 @@ Page({
     this.setData({deleteButtonDisplay: this.data.deleteButtonDisplay})
     //console.log(this.data.deleteButtonDisplay[0])
   },
+  navHandler: function(){
+    if (this.data.expandNav==="open"){
+      this.setData({expandNav: ""})
+    }
+    else{
+      this.setData({expandNav: "open"})
+    }
+  },
+  
 
   /**
    * Lifecycle function--Called when page load
