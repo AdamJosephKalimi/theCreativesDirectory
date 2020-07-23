@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/portfolio-page-empty/portfolio-page-empty",
         "pages/portfolio-page-user/portfolio-page-user",
         "pages/portfolio-page-creative/portfolio-page-creative",
         "pages/home-directory/home-directory",
