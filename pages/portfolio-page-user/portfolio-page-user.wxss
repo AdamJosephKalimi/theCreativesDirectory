@@ -15,6 +15,40 @@
   width: 64rpx;
 }
 
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 1076rpx;
+  background-color: white;
+  height: 130rpx;
+  width: 100%;
+}
+
+.nav-home-icon{
+  width: 100rpx;
+}
+
+.nav-portfolio-icon{
+  width: 71rpx;
+}
+
+.icon-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "NewYorK";
+  margin-top: 20rpx;
+}
+
+.nav-text-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20rpx;
+}
+
 .line {
   margin-top: 100rpx;
   margin-bottom: 32rpx;
