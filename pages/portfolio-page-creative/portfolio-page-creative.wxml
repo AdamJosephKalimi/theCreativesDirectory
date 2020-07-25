@@ -1,6 +1,17 @@
+<view class="contact-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="contact-content">
+		<text class="contact-head">Contact this creative on wechat:</text>
+		<view>
+			<navigator class="contact-ID" url="#">{{userDB.wechatID}}</navigator>
+			<image class="copy-icon-style-d" src= "/assets/copy-icon.svg"></image>
+		</view>
+	</view>
+</view>
+<view bindtap="closeModal" class="overlay {{modalState}}"></view>
 <view class="portfolio-wrapper">
 	<view class="line" />
-	<navigator class="button-style-g" url="#">Contact</navigator>
+	<text bindtap="openModal" class="button-style-g">Contact</text>
 	<text class="username">{{userDB.name}}</text>
 	<block wx:for="{{userDB.tags}}" wx:for-index="idx">
 		<block wx:if="{{idx < userDB.tags.length-1}}">
@@ -14,7 +25,7 @@
 	</text>
 	<image class="profile-image" src="{{userDB.profileImg}}" />
 	<text class="description">{{userDB.description}}
-  </text>
+	</text>
 	<view class="line-thin" />
 	<view class="portfolio-image-wrapper">
 		<block wx:for="{{userDB.portfolio}}" wx:for-index="idx">

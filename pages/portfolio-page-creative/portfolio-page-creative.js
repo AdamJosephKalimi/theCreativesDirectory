@@ -6,6 +6,7 @@ Page({
    * Page initial data
    */
   data: {
+    modalState: "hidden",
     //there are five "none"s because the maximum number of images that will show is five
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
     userDB: {
@@ -19,6 +20,12 @@ Page({
       portfolio: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"]
     },
     moveNav: ""
+  },
+  openModal: function(){
+    this.setData({modalState: "active"})
+  },
+  closeModal: function(){
+    this.setData({modalState: "hidden"})
   },
   showHideDelete: function(e){
     //get number from data-number

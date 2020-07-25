@@ -24,7 +24,7 @@
 
 .button-style-g {
   position: fixed;
-  top: 1080rpx;
+  top: 950rpx;
   left: 500rpx;
   z-index: 1000;
   border: 1px solid black;
@@ -115,6 +115,71 @@
   padding-right: 52rpx;
 }
 
+.contact-modal{
+  position: fixed;
+  background-color: white;
+  width: 710rpx;
+  height: 340rpx;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100002;
+}
+
+.contact-content{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;  
+  height: 100%;
+}
+
+
+.contact-head{
+  font-family: "NewYork";
+  font-size: 44rpx;
+  display: block;
+  
+}
+
+.contact-ID{
+  font-family: "NewYork Black";
+  font-size: 44rpx;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.modal-exit{
+  position: absolute;
+  top: 16rpx;
+  left: 660rpx;
+  font-family: "NewYork Black";
+}
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10001;
+}
+
+.hidden{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.copy-icon-style-d {
+  height: 50rpx;
+  width:50rpx;
+  margin-bottom: 20rpx;
+  margin-left: 6rpx;
+}
+
 .button-style-e {
   margin-top: 60rpx;
   display: inline-block;
@@ -132,6 +197,7 @@
 
 .download-wrapper {
   display: flex;
+  margin-bottom: 110rpx;
 }
 
 .button-style-c {
