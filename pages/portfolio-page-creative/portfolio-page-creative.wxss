@@ -24,8 +24,8 @@
 
 .button-style-g {
   position: fixed;
-  top: 950rpx;
-  left: 500rpx;
+  top: 81vh;
+  left: 65vw;
   z-index: 1000;
   border: 1px solid black;
   background-color: white;
@@ -213,21 +213,21 @@
   margin-left: 20rpx;
 }
 
-.navBar{
-  position: fixed;
-  z-index: 10000;
-  top: 1076rpx;
-  background-color: white;
-  height: 130rpx;
-  width: 100%;
-}
-
 .nav-home-icon{
-  width: 100rpx;
+  width: 90rpx;
 }
 
 .nav-portfolio-icon{
-  width: 71rpx;
+  width: 61rpx;
+}
+
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 90vh;
+  height: 10vh;
+  background-color: white;
+  width: 100%;
 }
 
 .icon-wrapper{
@@ -236,7 +236,7 @@
   justify-content: space-around;
   align-items: center;
   font-family: "NewYorK";
-  margin-top: 20rpx;
+  margin-top: 1.75vh;
 }
 
 .nav-text-wrapper{

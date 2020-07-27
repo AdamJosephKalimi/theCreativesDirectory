@@ -1,0 +1,10 @@
+<view class="contact-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="contact-content">
+		<text class="contact-head">Contact this creative on wechat:</text>
+		<view>
+			<navigator class="contact-ID" url="#">{{userDB.wechatID}}</navigator>
+			<image class="copy-icon-style-d" src= "/assets/copy-icon.svg"></image>
+		</view>
+	</view>
+</view>

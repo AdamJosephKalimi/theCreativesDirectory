@@ -107,21 +107,21 @@
     margin-bottom: 24rpx;
 }
 
-.navBar{
-    position: fixed;
-    z-index: 10000;
-    top: 1076rpx;
-    background-color: white;
-    height: 130rpx;
-    width: 100%;
-  }
-  
-  .nav-home-icon{
-    width: 100rpx;
+.nav-home-icon{
+    width: 90rpx;
   }
   
   .nav-portfolio-icon{
-    width: 71rpx;
+    width: 61rpx;
+  }
+  
+  .navBar{
+    position: fixed;
+    z-index: 10000;
+    top: 90vh;
+    height: 10vh;
+    background-color: white;
+    width: 100%;
   }
   
   .icon-wrapper{
@@ -130,7 +130,7 @@
     justify-content: space-around;
     align-items: center;
     font-family: "NewYorK";
-    margin-top: 20rpx;
+    margin-top: 1.75vh;
   }
   
   .nav-text-wrapper{

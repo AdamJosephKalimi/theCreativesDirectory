@@ -1,13 +1,20 @@
 // pages/portfolio-page-empty/portfolio-page-empty.js
 Page({
 
+
   /**
    * Page initial data
    */
   data: {
+    modalState: "hidden"
 
   },
-
+  openModal: function(){
+    this.setData({modalState: "active"})
+  },
+  closeModal: function(){
+    this.setData({modalState: "hidden"})
+  },
   /**
    * Lifecycle function--Called when page load
    */

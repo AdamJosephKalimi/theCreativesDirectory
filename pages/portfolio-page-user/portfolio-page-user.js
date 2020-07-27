@@ -5,6 +5,8 @@ Page({
    * Page initial data
    */
   data: {
+    modalState: "hidden",
+    navState: "hidden",
     expandNav: "",
     //there are five "none"s because the maximum number of images that will show is five
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
@@ -18,6 +20,11 @@ Page({
       description: "A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.",
       portfolio: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"]
     },
+  },
+  closeNav: function(){
+    this.setData({expandNav: ""})
+    this.setData({navState: "hidden"})
+
   },
   showHideDelete: function(e){
     //get number from data-number
@@ -37,13 +44,19 @@ Page({
   navHandler: function(){
     if (this.data.expandNav==="open"){
       this.setData({expandNav: ""})
+      this.setData({navState: "hidden"})
     }
     else{
       this.setData({expandNav: "open"})
+      this.setData({navState: "active"})
     }
   },
-  
-
+  openModal: function(){
+    this.setData({modalState: "active"})
+  },
+  closeModal: function(){
+    this.setData({modalState: "hidden"})
+  },
   /**
    * Lifecycle function--Called when page load
    */

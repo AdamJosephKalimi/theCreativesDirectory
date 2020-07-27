@@ -5,6 +5,7 @@
   padding-top: 40rpx;
   padding-left: 60rpx;
   padding-right: 60rpx;
+  padding-bottom: 200rpx;
 }
 .profile-icon{
   position: absolute;
@@ -38,9 +39,48 @@
 
 }
 
+.login-choice{
+  font-family: "NewYork Black";
+}
+
+.login-head{
+  display: block;
+  width: 100%;
+  font-family: "NewYork Medium";
+}
+
+
 .intro-text{
   font-family: "NewYork";
   font-size: 44rpx;
+}
+
+.modal-exit{
+  position: absolute;
+  top: 30rpx;
+  left: 440rpx;
+  font-family: "NewYork";
+}
+
+.login-modal{
+  position: fixed;
+  background-color: white;
+  width: 500rpx;
+  height: 400rpx;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100002;
+  font-family: "NewYork";
+}
+
+.login-content{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    flex-direction: column;
 }
 
 .idea-png{
@@ -54,23 +94,49 @@
   font-family: 'NewYork'; 
   margin-top: 60rpx; 
   font-size: 36rpx;
+  padding-bottom: 200rpx;
 }
 
 .navBar{
   position: fixed;
   z-index: 10000;
-  top: 1076rpx;
+  top: 90vh;
+  height: 10vh;
   background-color: white;
-  height: 130rpx;
   width: 100%;
 }
 
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10001;
+}
+
+.hidden{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
 .nav-home-icon{
-  width: 100rpx;
+  width: 90rpx;
 }
 
 .nav-portfolio-icon{
-  width: 71rpx;
+  width: 61rpx;
+}
+
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 90vh;
+  height: 10vh;
+  background-color: white;
+  width: 100%;
 }
 
 .icon-wrapper{
@@ -79,7 +145,7 @@
   justify-content: space-around;
   align-items: center;
   font-family: "NewYorK";
-  margin-top: 20rpx;
+  margin-top: 1.75vh;
 }
 
 .nav-text-wrapper{

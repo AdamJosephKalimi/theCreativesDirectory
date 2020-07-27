@@ -1,4 +1,5 @@
 <!--pages/portfolio-page-user/portfolio-page-user.wxml-->
+<view bindtap="closeNav" class="overlay {{navState}}"></view>
 <scroll-view scroll-y="true" class="sideNav {{expandNav}}">
 	<view style="margin-bottom: 72rpx;" bindtap="navHandler">X</view>
 	<view style="text-align: center;">
@@ -89,9 +90,19 @@
 	<text class="upload-description">-JPEG or PNG, max, 5mb in size</text>
 	<text class="upload-description">-Up to 5 per profile page</text>
 	<button class="save-button">Save</button>
-	<button class="delete-portfolio-button">Delete my portfolio</button>
+	<button bindtap="openModal" class="delete-portfolio-button">Delete my portfolio</button>
 	<button class="contact-portfolio-button">Contact Us</button>
 </scroll-view>	
+<view class="delete-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="delete-content">
+		<text class="delete-head">Are you sure you want to erase your portfolio and information from this mini program?</text>
+		<view class="delete-choice" style="margin-top: 30rpx;">
+			<text style="margin-right: 80rpx;">No</text>
+			<text>Yes</text>
+		</view>
+	</view>
+</view>
 <view class="portfolio-wrapper">
 	<image class="profile-icon" bindtap="navHandler" src="/assets/profile-icon.svg" />
 	<view class="line" />

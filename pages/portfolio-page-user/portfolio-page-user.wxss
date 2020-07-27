@@ -6,6 +6,23 @@
   padding-left: 60rpx;
   padding-right: 60rpx;
 }
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+.hidden{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
 .profile-icon{
   position: absolute;
   z-index: 1000;
@@ -15,21 +32,21 @@
   width: 64rpx;
 }
 
-.navBar{
-  position: fixed;
-  z-index: 10000;
-  top: 1076rpx;
-  background-color: white;
-  height: 130rpx;
-  width: 100%;
-}
-
 .nav-home-icon{
-  width: 100rpx;
+  width: 90rpx;
 }
 
 .nav-portfolio-icon{
-  width: 71rpx;
+  width: 61rpx;
+}
+
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 90vh;
+  height: 10vh;
+  background-color: white;
+  width: 100%;
 }
 
 .icon-wrapper{
@@ -38,7 +55,7 @@
   justify-content: space-around;
   align-items: center;
   font-family: "NewYorK";
-  margin-top: 20rpx;
+  margin-top: 1.75vh;
 }
 
 .nav-text-wrapper{
@@ -304,4 +321,42 @@
 
 .contact-portfolio-button::after{
   border: none;
+}
+
+.delete-choice{
+  font-family: "NewYork Black";
+}
+
+.delete-head{
+  display: block;
+  width: 100%;
+  font-family: "NewYork Medium";
+}
+
+.modal-exit{
+  position: absolute;
+  top: 30rpx;
+  left: 440rpx;
+  font-family: "NewYork";
+}
+
+.delete-modal{
+  position: fixed;
+  background-color: white;
+  width: 500rpx;
+  height: 400rpx;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100002;
+  font-family: "NewYork";
+}
+
+.delete-content{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    flex-direction: column;
 }
