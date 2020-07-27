@@ -26,6 +26,9 @@ Page({
     this.setData({navState: "hidden"})
 
   },
+  closeDeleteModal: function(){
+    this.setData({modalState: "hidden"})
+  },
   showHideDelete: function(e){
     //get number from data-number
     const targetNumber = e.currentTarget.dataset.number
@@ -53,9 +56,6 @@ Page({
   },
   openModal: function(){
     this.setData({modalState: "active"})
-  },
-  closeModal: function(){
-    this.setData({modalState: "hidden"})
   },
   /**
    * Lifecycle function--Called when page load

@@ -52,7 +52,7 @@
     padding-top: 80rpx;
     padding-left: 60rpx;
     padding-right: 60rpx;
-    padding-bottom: 80rpx;
+    padding-bottom: 125rpx;
 }
 
 .home-head {

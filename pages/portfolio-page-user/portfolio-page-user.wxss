@@ -184,17 +184,34 @@
 
 .sideNav{
   position: absolute;
-  z-index: 1040;
-  height: 100vh;
+  z-index: 99999;
   width: 500rpx; 
-  background-color: rgb(240,241,242);
-  padding: 60rpx;
-  margin-left: 760rpx;
+  background-color: white;
+  padding-top: 60rpx;
+  padding-bottom: 30rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  /*margin-left: 760rpx;*/
+  right: -100%;
   transition: 0.4s ease;
 }
 
+.button-style-f-active:after{
+  border: none;
+}
+
+.delete-overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100000;
+
+}
+
 .open{
-  margin-left: 130rpx;
+  /*margin-left: 130rpx;*/
+  right: 0;
 }
 
 
@@ -282,8 +299,9 @@
 }
 
 .delete-portfolio-button{
+  height: 70rpx;
   display: inline-block;
-  margin-top: 30rpx;
+  margin-top: 120rpx;
   margin-bottom: 30rpx;
   font-size: 28rpx;
   padding: 0;
@@ -304,8 +322,9 @@
 }
 
 .contact-portfolio-button{
+  height: 70rpx;
   display: inline-block;
-  margin-top: 30rpx;
+  margin-top: 120rpx;
   margin-bottom: 30rpx;
   font-size: 28rpx;
   padding: 0;

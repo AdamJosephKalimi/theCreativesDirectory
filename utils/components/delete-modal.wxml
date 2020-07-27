@@ -1,0 +1,10 @@
+<view class="delete-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="delete-content">
+		<text class="delete-head">Are you sure you want to erase your portfolio and information from this mini program?</text>
+		<view class="delete-choice" style="margin-top: 30rpx;">
+			<text style="margin-right: 80rpx;">No</text>
+			<text>Yes</text>
+		</view>
+	</view>
+</view>
