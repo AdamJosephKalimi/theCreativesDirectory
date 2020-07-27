@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/landing/landing",
         "pages/portfolio-page-user/portfolio-page-user",
         "pages/home-directory/home-directory",
         "pages/portfolio-page-creative/portfolio-page-creative",
