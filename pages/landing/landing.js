@@ -9,6 +9,16 @@ Page({
   },
 
   /**
+   * Event listeners
+   */
+  enterMP: function () {
+    wx.redirectTo({
+      url: '../home-directory/home-directory'
+    })
+    console.log("redirecting")
+  },
+
+  /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {

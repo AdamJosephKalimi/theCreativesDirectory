@@ -3,7 +3,7 @@
   <text class="title">The Creatives Directory</text>
   <image mode="widthFix" class="landing-illustration" src="/assets/landing-illustration.png"></image>
   <text class="description">We’re here to promote the work of our community, foster increased client outreach, and most importantly creative collaborations, and friendships.</text>
-  <view class="enter-wrapper">
+  <view class="enter-wrapper" bindtap="enterMP">
     <text>Enter</text>
     <image style="margin-left: 20rpx; width: 64rpx;" src="/assets/arrow-icon.svg"></image>
   </view>
