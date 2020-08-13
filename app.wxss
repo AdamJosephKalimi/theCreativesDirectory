@@ -43,23 +43,7 @@
     flex-direction: column;
     justify-content: space-between
   }
-  
-  .icon-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "NewYorK";
-    margin-top: 1.75vh;
-  }
-  
-  .nav-text-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20rpx;
-  }
+
 
 /* Button Components */
 
