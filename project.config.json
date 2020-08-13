@@ -6,15 +6,33 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
 		"autoAudits": false,
-		"coverView": true
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wxc4edd9fbc52f80b3",
+	"appid": "wx8b70c2c7a8968fcb",
 	"projectname": "theCreativesDirectory",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -58,6 +76,33 @@
 					"name": "Demo",
 					"pathName": "pages/demo/demo",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/portfolio-filled/portfolio-filled",
+					"pathName": "pages/portfolio-filled/portfolio-filled",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/portfolio-page-user/portfolio-page-user",
+					"pathName": "pages/portfolio-page-user/portfolio-page-user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Landing",
+					"pathName": "pages/landing/landing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Portfolio-Empty",
+					"pathName": "pages/portfolio-page-empty/portfolio-page-empty",
 					"scene": null
 				}
 			]
