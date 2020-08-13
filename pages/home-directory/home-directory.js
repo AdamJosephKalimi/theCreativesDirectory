@@ -30,6 +30,16 @@ Page({
   },
 
   /**
+   * Event Listeners
+   */
+  navPortfolioIcon: function () {
+    wx.switchTab({
+      url: "../portfolio-page-user/portfolio-page-user"
+    })
+    console.log("navPortfolioIcon")
+  },
+
+  /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {

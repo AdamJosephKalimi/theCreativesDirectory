@@ -1,4 +1,21 @@
 <view class="navBar">
+	<view class="navButton">
+		<view class="navButtonIconCenter">
+			<image class="nav-home-icon" mode="widthFix" src="/assets/nav-home-icon.svg"></image>
+			<text>Creatives Directory</text>
+		</view>
+	</view>
+	<view class="navButton">
+		<view class="navButtonIconCenter">
+			<image class="nav-portfolio-icon" mode="widthFix" src="/assets/nav-portfolio-icon.svg"></image>
+			<text>My Portfolio</text>
+		</view>
+	</view>
+</view>
+
+
+<!-- PREVIOUS NAVBAR VERSION -->
+<!-- <view class="navBar">
 	<view class="icon-wrapper">
 		<image class="nav-home-icon" mode="widthFix" src="/assets/nav-home-icon.svg"></image>
 		<image class="nav-portfolio-icon" mode="widthFix" src="/assets/nav-portfolio-icon.svg"></image>
@@ -7,4 +24,4 @@
 		<text>Creatives Directory</text>
 		<text style="margin-right: 12rpx;">My Portfolio</text>
 	</view>
-</view>
+</view> -->

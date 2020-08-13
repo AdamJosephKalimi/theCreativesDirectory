@@ -111,7 +111,7 @@
     width: 90rpx;
   }
   
-  .nav-portfolio-icon{
+  /* .nav-portfolio-icon{
     width: 61rpx;
   }
   
@@ -139,4 +139,4 @@
     justify-content: space-around;
     align-items: center;
     font-size: 20rpx;
-  }
+  } */
