@@ -1,0 +1,49 @@
+@import "../../fonts/fonts.wxss";
+
+/* pages/landing/landing.wxss */
+
+.landing-wrapper{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(246, 243, 239);
+  text-align: center;
+  padding-top: 120rpx;
+  padding-bottom: 120rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+}
+
+.title{
+  font-family: "NewYork Black";
+  display: block;
+  font-size: 68rpx;
+}
+
+.landing-illustration{
+  margin-top: 30rpx;
+  width: 620rpx;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.description{
+  margin-top: 20rpx;
+  font-family: "NewYork";
+  width: 630rpx;
+  font-size: 40rpx;
+  display: block;
+}
+
+.enter-wrapper{
+  position: fixed;
+  top: 88vh;
+  left: 10vw;
+  font-family: "NewYork Black";
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  margin-left: 425rpx;
+}

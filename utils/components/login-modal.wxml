@@ -1,0 +1,10 @@
+<view class="login-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="login-content">
+    <text class="login-head">Sign in using WeChat?</text>
+    <view class="login-choice" style="margin-top: 30rpx;">
+      <text style="margin-right: 50rpx;">Yes</text>
+      <text>No</text>
+    </view>
+	</view>
+</view>

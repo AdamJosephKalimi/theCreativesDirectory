@@ -1,0 +1,10 @@
+<view class="navBar">
+	<view class="icon-wrapper">
+		<image class="nav-home-icon" mode="widthFix" src="/assets/nav-home-icon.svg"></image>
+		<image class="nav-portfolio-icon" mode="widthFix" src="/assets/nav-portfolio-icon.svg"></image>
+	</view>
+	<view class="nav-text-wrapper">
+		<text>Creatives Directory</text>
+		<text style="margin-right: 12rpx;">My Portfolio</text>
+	</view>
+</view>

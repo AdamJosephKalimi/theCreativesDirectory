@@ -1,0 +1,159 @@
+<!--pages/portfolio-page-user/portfolio-page-user.wxml-->
+<view bindtap="closeNav" class="overlay {{navState}}"></view>
+<scroll-view scroll-y="true" class="sideNav {{expandNav}}">
+	<view style="margin-bottom: 72rpx;" bindtap="navHandler">X</view>
+	<view style="text-align: center;">
+		<image class="empty-profile-image" mode="widthFix" src="/assets/landing-illustration.png" />
+		<text class="edit-profile-image-text">Edit profile picture</text>
+	</view>
+	<view>
+		<input
+		 class="settingsInput"
+		 name="settingsName"
+		 placeholder-style="font-family: 'NewYork Black'"
+		 placeholder="Name"
+		 bindinput="settingsNameInput"
+		/>
+	</view>
+	<view>
+		<input
+		 class="settingsInput"
+		 name="settingsBio"
+		 placeholder-style="font-family: 'NewYork Black'"
+		 placeholder="Bio"
+		 bindinput="settingsBioInput"
+		/>
+	</view>
+	<view>
+		<input
+		 class="settingsInput"
+		 name="settingsLocation"
+		 placeholder-style="font-family: 'NewYork Black'"
+		 placeholder="I am based in ..."
+		 bindinput="settingsLocationInput"
+		/>
+	</view>
+	<view>
+		<input
+		 class="settingsInput"
+		 name="settingsWeChatID"
+		 placeholder-style="font-family: 'NewYork Black'"
+		 placeholder="WeChat ID"
+		 bindinput="settingsWeChatIDInput"
+		/>
+	</view>
+	<view>
+		<input
+		 class="settingsInput"
+		 name="settingsWebURL"
+		 placeholder-style="font-family: 'NewYork Black'"
+		 placeholder="Website URL (optional)"
+		 bindinput="settingsWebURLInput"
+		/>
+	</view>
+	<text style="font-family: 'NewYork Black'; line-height: 3;">Creative area(s)</text>
+	<view class="creative-area" style="margin-bottom: 30rpx;">
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Graphic design</button>
+			<button class="button-style-f-active right-ca-button">Web design</button>
+		</view>
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Branding</button>
+			<button class="button-style-f-active right-ca-button">Illustration</button>
+		</view>
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Art direction</button>
+			<button class="button-style-f-active right-ca-button">Photography</button>
+		</view>
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Videography</button>
+			<button class="button-style-f-active right-ca-button">Web dev.</button>
+		</view>
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Copywriting</button>
+			<button class="button-style-f-active right-ca-button">Product design</button>
+		</view>
+		<view class="two-button-wrapper">
+			<button class="button-style-f-active">Animation</button>
+			<button class="button-style-f-active right-ca-button">Other</button>
+		</view>
+	</view>
+	<view class="upload-wrapper">
+		<navigator class="upload-pdf" url="#">Upload pdf of portfolio</navigator>
+		<image class="arrow-icon" src="/assets/arrow-icon.svg" />
+	</view>
+	<text class="upload-description">-max 5 MB</text>
+	<view class="upload-wrapper">
+		<navigator class="upload-pdf" url="#">Upload image of work</navigator>
+		<image class="arrow-icon" src="/assets/arrow-icon.svg" />
+	</view>
+	<text class="upload-description">-JPEG or PNG, max, 5mb in size</text>
+	<text class="upload-description">-Up to 5 per profile page</text>
+	<button class="save-button">Save</button>
+	<button bindtap="openModal" class="delete-portfolio-button">Delete my portfolio</button>
+	<button class="contact-portfolio-button">Contact Us</button>
+</scroll-view>	
+<view bindtap="closeDeleteModal" class="delete-overlay {{modalState}}"></view>
+<view class="delete-modal {{modalState}}">
+	<text bindtap="closeDeleteModal" class="modal-exit">X</text>
+	<view class="delete-content">
+		<text class="delete-head">Are you sure you want to erase your portfolio and information from this mini program?</text>
+		<view class="delete-choice" style="margin-top: 30rpx;">
+			<text style="margin-right: 80rpx;">No</text>
+			<text>Yes</text>
+		</view>
+	</view>
+</view>
+<view class="portfolio-wrapper">
+	<image class="profile-icon" bindtap="navHandler" src="/assets/profile-icon.svg" />
+	<view class="line" />
+	<text class="username">{{userDB.name}}</text>
+	<block wx:for="{{userDB.tags}}" wx:for-index="idx">
+		<block wx:if="{{idx < userDB.tags.length-1}}">
+			<text decode="true" class="tags">{{item}} /&nbsp;</text>
+		</block>
+		<block wx:else>
+			<text class="tags">{{item}}</text>
+		</block>
+	</block>
+	<text class="location">Based in <text class="bold">{{userDB.location}}</text>
+	</text>
+	<image class="profile-image" src="{{userDB.profileImg}}" />
+	<text class="description">{{userDB.description}}
+  </text>
+	<view class="line-thin" />
+	<view class="portfolio-image-wrapper">
+		<block wx:for="{{userDB.portfolio}}" wx:for-index="idx">
+			<view class="portfolio-image">
+				<image style="width: 100%;" mode="widthFix" src="{{item}}" />
+				<image
+				 class="vertical-dots"
+				 mode="widthFix"
+				 src="/assets/vertical-dots.png"
+				 bindtap="showHideDelete"
+				 data-number="{{idx}}"
+				/>
+				<button style="display: {{deleteButtonDisplay[idx]}}" class="delete-button">Delete</button>
+			</view>
+		</block>
+	</view>
+	<view class="line-thin" />
+	<view>
+		<navigator class="button-style-e" url="#">See more: {{userDB.website}}</navigator>
+		<image class="copy-icon-style-e" src="/assets/copy-icon.svg" />
+	</view>
+	<view class="download-wrapper">
+		<navigator class="button-style-c" url="#">Download portfolio</navigator>
+		<image class="arrow-icon" src="/assets/arrow-icon.svg" />
+	</view>
+</view>
+<view class="navBar">
+	<view class="icon-wrapper">
+		<image class="nav-home-icon" mode="widthFix" src="/assets/nav-home-icon.svg"></image>
+		<image class="nav-portfolio-icon" mode="widthFix" src="/assets/nav-portfolio-icon.svg"></image>
+	</view>
+	<view class="nav-text-wrapper">
+		<text>Creatives Directory</text>
+		<text style="margin-right: 12rpx;">My Portfolio</text>
+	</view>
+</view>

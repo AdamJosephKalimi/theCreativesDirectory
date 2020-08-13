@@ -1,0 +1,157 @@
+/* pages/portfolio-page-empty/portfolio-page-empty.wxss */
+@import "../../fonts/fonts.wxss";
+.portfolio-wrapper{
+  background-color: rgb(246, 243, 239);
+  padding-top: 40rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  padding-bottom: 200rpx;
+}
+.profile-icon{
+  position: absolute;
+  z-index: 1000;
+  top: 40rpx;
+  left: 626rpx;
+  height: 64rpx;
+  width: 64rpx;
+}
+
+.line {
+  margin-top: 100rpx;
+  margin-bottom: 32rpx;
+  height: 10rpx;
+  background-color: black;
+  width: 100%;
+}
+
+.title{
+  display: block;
+  font-size: 68rpx;
+  font-family: "NewYork Black";
+}
+
+.login-arrow{
+  position: absolute;
+  top: 200rpx;
+  left: 550rpx;
+  display: inline-block;
+  width: 134rpx;
+
+}
+
+.login-choice{
+  font-family: "NewYork Black";
+}
+
+.login-head{
+  display: block;
+  width: 100%;
+  font-family: "NewYork Medium";
+}
+
+
+.intro-text{
+  font-family: "NewYork";
+  font-size: 44rpx;
+}
+
+.modal-exit{
+  position: absolute;
+  top: 30rpx;
+  left: 440rpx;
+  font-family: "NewYork";
+}
+
+.login-modal{
+  position: fixed;
+  background-color: white;
+  width: 500rpx;
+  height: 400rpx;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100002;
+  font-family: "NewYork";
+}
+
+.login-content{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    flex-direction: column;
+}
+
+.idea-png{
+  margin-top: 30rpx;
+  width: 568rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tips{
+  font-family: 'NewYork'; 
+  margin-top: 60rpx; 
+  font-size: 36rpx;
+  padding-bottom: 200rpx;
+}
+
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 90vh;
+  height: 10vh;
+  background-color: white;
+  width: 100%;
+}
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10001;
+}
+
+.hidden{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.nav-home-icon{
+  width: 90rpx;
+}
+
+.nav-portfolio-icon{
+  width: 61rpx;
+}
+
+.navBar{
+  position: fixed;
+  z-index: 10000;
+  top: 90vh;
+  height: 10vh;
+  background-color: white;
+  width: 100%;
+}
+
+.icon-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "NewYorK";
+  margin-top: 1.75vh;
+}
+
+.nav-text-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20rpx;
+}

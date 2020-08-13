@@ -1,0 +1,64 @@
+<view class="contact-modal {{modalState}}">
+	<text bindtap="closeModal" class="modal-exit">X</text>
+	<view class="contact-content">
+		<text class="contact-head">Contact this creative on wechat:</text>
+		<view>
+			<navigator class="contact-ID" url="#">{{userDB.wechatID}}</navigator>
+			<image class="copy-icon-style-d" src= "/assets/copy-icon.svg"></image>
+		</view>
+	</view>
+</view>
+<view bindtap="closeModal" class="overlay {{modalState}}"></view>
+<view class="portfolio-wrapper">
+	<view class="line" />
+	<text bindtap="openModal" class="button-style-g">Contact</text>
+	<text class="username">{{userDB.name}}</text>
+	<block wx:for="{{userDB.tags}}" wx:for-index="idx">
+		<block wx:if="{{idx < userDB.tags.length-1}}">
+			<text decode="true" class="tags">{{item}} /&nbsp;</text>
+		</block>
+		<block wx:else>
+			<text class="tags">{{item}}</text>
+		</block>
+	</block>
+	<text class="location">Based in <text class="bold">{{userDB.location}}</text>
+	</text>
+	<image class="profile-image" src="{{userDB.profileImg}}" />
+	<text class="description">{{userDB.description}}
+	</text>
+	<view class="line-thin" />
+	<view class="portfolio-image-wrapper">
+		<block wx:for="{{userDB.portfolio}}" wx:for-index="idx">
+			<view class="portfolio-image">
+				<image style="width: 100%;" mode="widthFix" src="{{item}}" />
+				<image
+				 class="vertical-dots"
+				 mode="widthFix"
+				 src="/assets/vertical-dots.png"
+				 bindtap="showHideDelete"
+				 data-number="{{idx}}"
+				/>
+				<button style="display: {{deleteButtonDisplay[idx]}}" class="delete-button">Delete</button>
+			</view>
+		</block>
+	</view>
+	<view class="line-thin" />
+	<view>
+		<navigator class="button-style-e" url="#">See more: {{userDB.website}}</navigator>
+		<image class="copy-icon-style-e" src="/assets/copy-icon.svg" />
+	</view>
+	<view class="download-wrapper">
+		<navigator class="button-style-c" url="#">Download portfolio</navigator>
+		<image class="arrow-icon" src="/assets/arrow-icon.svg" />
+	</view>
+</view>
+<view class="navBar">
+	<view class="icon-wrapper">
+		<image class="nav-home-icon" mode="widthFix" src="/assets/nav-home-icon.svg"></image>
+		<image class="nav-portfolio-icon" mode="widthFix" src="/assets/nav-portfolio-icon.svg"></image>
+	</view>
+	<view class="nav-text-wrapper">
+		<text>Creatives Directory</text>
+		<text style="margin-right: 12rpx;">My Portfolio</text>
+	</view>
+</view>
