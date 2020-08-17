@@ -81,12 +81,12 @@
   margin-bottom: 24rpx;
 }
 
-.tags{
+.creative-areas{
   display: inline-block;
   font-size: 32rpx;
   font-family: "NewYork";
 }
-.location{
+.province{
   display: block;
   font-family: "NewYork";
   margin-bottom: 48rpx;
@@ -104,7 +104,7 @@
   margin-bottom: 64rpx;
 }
 
-.description{
+.biography{
   display: block;
   margin-bottom: 40rpx;
   font-family: "Less";
@@ -121,7 +121,7 @@
   padding-top: 74rpx;
 }
 
-.portfolio-image{
+.images_of_work-image{
   position: relative;
   margin-bottom: 24rpx;
 }
