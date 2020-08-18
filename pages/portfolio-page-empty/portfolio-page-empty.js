@@ -19,7 +19,6 @@ Page({
       wechatID: "",
     },
     loggedIn: false 
-    // name: "Adam"
   },
   openModal: function(){
     this.setData({modalState: "active"})
