@@ -103,6 +103,14 @@
 					"id": -1,
 					"name": "Portfolio-Empty",
 					"pathName": "pages/portfolio-page-empty/portfolio-page-empty",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/portfolio/portfolio",
+					"pathName": "pages/portfolio/portfolio",
+					"query": "",
 					"scene": null
 				}
 			]

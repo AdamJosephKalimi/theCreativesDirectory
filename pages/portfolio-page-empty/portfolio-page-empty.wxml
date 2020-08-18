@@ -14,20 +14,34 @@
 <view class="portfolio-wrapper">
 	<image class="profile-icon" bindtap="openModal" src="/assets/profile-icon.svg" />
   <view class="line" />
-  <text class="title">Are you a creative?</text>
-  <image class="login-arrow" mode="widthFix" src="/assets/login-arrow.png"></image>
-  <view style="text-align: center; margin-top: 100rpx; ">
-    <text class="intro-text">Create a profile so others can see how great you are. 
-      You never know, you may be exactly what they are looking for!</text>
+  <view wx:if="{{loggedIn == true}}">
+    <text class="title">Are you a creative?</text>
+    <image class="login-arrow" mode="widthFix" src="/assets/login-arrow.png"></image>
+
+    <!-- Attempting conditional rendering -->
+    <view wx:if="{{loggedIn == false}}"   style="text-align: center; margin-top: 100rpx; ">
+      <text class="intro-text">Create a profile so others can see how great you are. 
+        You never know, you may be exactly what they are looking for!
+        Note that you are currently not logged in.
+      </text>
+    </view>
+    <view wx:if="{{loggedIn == true}}" style="text-align: center; margin-top: 100rpx; ">
+        <text class="intro-text">Create a profile so others can see how great you are. 
+          You never know, you may be exactly what they are looking for!
+          Status update: You're logged in!
+        </text>
+      </view>
+      <!-- End -->
+
+    <image class="idea-png" mode="widthFix" src="/assets/ideas-illustration.png"></image>
+    <text class="tips">
+      Tips:
+  1. Clear descriptions will set you apart
+  2. Put your best work forward
+  3. Upload a portfolio (PDF) for those 
+      interested in learning more
+    </text>
   </view>
-  <image class="idea-png" mode="widthFix" src="/assets/ideas-illustration.png"></image>
-  <text class="tips">
-    Tips:
-1. Clear descriptions will set you apart
-2. Put your best work forward
-3. Upload a portfolio (PDF) for those 
-     interested in learning more
-  </text>
 </view>
 <view class="navBar">
 	<view class="icon-wrapper">

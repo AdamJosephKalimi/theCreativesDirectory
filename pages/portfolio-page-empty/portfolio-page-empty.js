@@ -18,9 +18,7 @@ Page({
       profilePhoto: "demoURL",
       wechatID: "",
     },
-    name: {
-      user: "Adam"
-    }
+    loggedIn: false 
     // name: "Adam"
   },
   openModal: function(){
@@ -46,6 +44,7 @@ Page({
             province: data.detail.userInfo.province,            
             profilePhoto: data.detail.userInfo.avatarUrl,
           },
+          loggedIn: true
         })
   
       }, err => {
@@ -57,7 +56,11 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    // check to see if the user is logged in. 
+    // If user is logged in, change loggedIn to true.
+    this.setData ({
+      // loggedIn: true
+    });
   },
 
   /**
