@@ -1,2 +1,12 @@
 <!--pages/portfolio/portfolio.wxml-->
 <text>pages/portfolio/portfolio.wxml</text>
+
+
+<view wx:if="{{loggedIn == false}}">
+
+</view>
+
+
+<view wx:if="{{loggedIn == true}}">
+
+</view>
