@@ -21,7 +21,6 @@ Page({
     //   portfolio: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"]
     // },
     userDB: {
-      id: '123',
       name: "Julie Russel",
       biography: "A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.",
       province: "Shanghai",

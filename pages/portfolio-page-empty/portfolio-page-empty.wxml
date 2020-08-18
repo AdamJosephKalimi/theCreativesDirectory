@@ -5,7 +5,8 @@
 	<view class="login-content">
     <text class="login-head">Sign in using WeChat?</text>
     <view class="login-choice" style="margin-top: 30rpx;">
-      <text style="margin-right: 80rpx;">Yes</text>
+      <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler">WeChat login</button>
+      <text style="margin-right: 80rpx;" bindtap="updatedURL">Yes</text>
       <text>No</text>
     </view>
 	</view>
