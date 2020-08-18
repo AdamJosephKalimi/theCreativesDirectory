@@ -15,7 +15,7 @@
     </view>
     <view class="portfolio-wrapper-logged-out">
         <image class="profile-icon" bindtap="openModal" src="/assets/profile-icon.svg" />
-    <view class="line" />
+        <view class="line" />
     
         <text class="title">Are you a creative?</text>
         <image class="login-arrow" mode="widthFix" src="/assets/login-arrow.png"></image>
@@ -160,8 +160,8 @@
         <view class="line" />
         <text class="username">{{userDB.name}}</text>
         <block wx:for="{{userDB.creativeAreas}}" wx:for-index="idx">
-            <block wx:if="{{idx < userDB.tags.length-1}}">
-                <text decode="true" class="tags">{{item}} /&nbsp;</text>
+            <block wx:if="{{idx < userDB.creativeAreas.length-1}}">
+                <text decode="true" class="creativeAreas">{{item}} /&nbsp;</text>
             </block>
             <block wx:else>
                 <text class="creative-areas">{{item}}</text>

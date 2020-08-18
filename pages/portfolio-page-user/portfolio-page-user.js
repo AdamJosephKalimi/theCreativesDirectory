@@ -25,7 +25,7 @@ Page({
       biography: "A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.",
       province: "Shanghai",
       websiteUrl: "www.juliestudios.com",
-      creativeAreas: ["Graphic Designer", "UI/UX", "Web Developer"],
+      creativeAreas: ["Graphic Designer", "UI/UX", "Web Developer", "Sungazer"],
       portfolio: null,
       imagesOfWork: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"],
       profilePhoto: "/assets/sample-profile.png",

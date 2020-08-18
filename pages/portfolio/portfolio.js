@@ -7,7 +7,7 @@ Page({
   data: {
     modalState: "hidden",
     navState: "hidden",
-    expandNav: "",
+    expandNav: "open",
     //there are five "none"s because the maximum number of images that will show is five
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
     userDB: {
@@ -76,17 +76,19 @@ Page({
   userInfoHandler(data) {
     wx.BaaS.auth.loginWithWechat(data).then(user => {
         // user 包含用户完整信息，详见下方描述
-        let userDB = this.data.userDB
+        // let userDB = this.data.userDB
 
-        console.log("originalDB", userDB)
-        console.log("data - avatar", data.detail.userInfo)
+        // Is it a bad idea to run setData in this function?
         this.setData({
           userDB: {
             name: data.detail.userInfo.nickName,
             province: data.detail.userInfo.province,            
             profilePhoto: data.detail.userInfo.avatarUrl,
+            websiteUrl: "www.a3collective.com",
+            creativeAreas: ["Graphic Designer", "UI/UX", "Web Developer"],
           },
-          loggedIn: true
+          loggedIn: true,
+          modalState: "hidden"
         })
   
       }, err => {
