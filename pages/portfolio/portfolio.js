@@ -10,16 +10,29 @@ Page({
     expandNav: "open",
     //there are five "none"s because the maximum number of images that will show is five
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
+
+    formData: {
+      name: "Name",
+      biography: "Biography",
+      weChatID: "Demo",
+      province: "I am based in...",
+      websiteUrl: "Website URL (optional)",
+      creativeAreas: [],
+      imagesOfWork: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"],
+      portfolio: null,
+      imagesOfWork: null
+    },
+
     userDB: {
-      name: "Julie Russel",
-      biography: "A multidisciplinary designer focused on creating refined and engaging brand experiences that stand the test of time.",
-      province: "Shanghai",
-      websiteUrl: "www.juliestudios.com",
-      creativeAreas: ["Graphic Designer", "UI/UX", "Web Developer"],
+      name: "",
+      biography: "Bio",
+      province: "",
+      websiteUrl: "",
+      creativeAreas: ["", "", ""],
       portfolio: null,
       imagesOfWork: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"],
-      profilePhoto: "/assets/sample-profile.png",
-      wechatID: "JulieRussel1990",
+      profilePhoto: "",
+      wechatID: "",
     },
     loggedIn: false 
   },
@@ -70,9 +83,21 @@ Page({
       this.setData({modalState: "hidden"})
     },
 
+    formSubmit: function(e) {
+      let value = e.detail.value
+      console.log('form triggers a submit event, carrying the following data: ', e.detail.value)
+      console.log("name", value.settingsName)
+      console.log("bio", value.settingsBio)
+      console.log("province", value.settingsProvince)
+      console.log("wechat id", value.settingsWeChatID)
+      console.log("website url", value.settingsWebsiteURL)
+
+    },
+
   /**
    * User Login
    */
+  // This happens when a user clicks the WeChat Login button on the modal
   userInfoHandler(data) {
     wx.BaaS.auth.loginWithWechat(data).then(user => {
         // user 包含用户完整信息，详见下方描述
@@ -80,12 +105,17 @@ Page({
 
         // Is it a bad idea to run setData in this function?
         this.setData({
-          userDB: {
+          formData: {
             name: data.detail.userInfo.nickName,
             province: data.detail.userInfo.province,            
             profilePhoto: data.detail.userInfo.avatarUrl,
-            websiteUrl: "www.a3collective.com",
-            creativeAreas: ["Graphic Designer", "UI/UX", "Web Developer"],
+            websiteUrl: "Website URL",
+            creativeAreas: [""],
+            biography: "Bio",
+            weChatID: "WeChat ID",
+            creativeAreas: [],
+            portfolio: null,
+            imagesOfWork: null
           },
           loggedIn: true,
           modalState: "hidden"
@@ -94,6 +124,63 @@ Page({
       }, err => {
         // **err 有两种情况**：用户拒绝授权，HError 对象上会包含基本用户信息：id、openid、unionid；其他类型的错误，如网络断开、请求超时等，将返回 HError 对象（详情见下方注解）
     })
+  },
+
+  /**
+   * Create creative in the backend by saving the form
+   */
+  createCreative: function(e) {
+    // console.log("Creative created", e);
+    // create the data structure here and POST to BaaS
+    
+    console.log(e)
+
+    // let creativeProfile = this.data.formData
+    // console.log("creativeProfile", creativeProfile)
+    // let Creatives = new wx.BaaS.TableObject('creative')
+    // let creative = Creatives.create()
+
+    // creative.set("name", creativeProfile.name)
+    // creative.set("wechatID", creativeProfile.wechatID)
+    // creative.set("province", creativeProfile.province)
+    // creative.set("biography", creativeProfile.biography)
+    // creative.set("websiteUrl", creativeProfile.websiteUrl)
+    // creative.set("profileImage", creativeProfile.profilePhoto)
+    // creative.set("creativeAreas", creativeProfile.creativeAreas)
+
+    // This was a demo to test sending the img URL to the backend 
+    // (It works, but the question is "Do I want to send the URL
+    //  to the backend, or do I want to send the image?")
+    
+    /** To do
+     * 1. Set up feature for users to upload files
+     * 2. Update these columns in the DB to reflect the correct data type (an array of file, or an array of strings, etc)
+     * 3. Use "Second way to push to DB" as this will allow me to delete the 
+     *    individual lines of code above and just send the object in page data
+     *    to the database.
+    */
+    // creative.set("portfolio", creativeProfile.portfolio)
+    // creative.set("imagesOfWork", creativeProfile.imagesOfWork)
+    // creative.set("profilePhoto", creativeProfile.profilePhoto)
+    
+
+    // First way to push to DB
+    // creative.save().then(res => {
+      // success
+      // console.log(res)
+    // }, err => {
+      // HError 对象
+    // })
+
+    // Second way to push to DB
+    // FIX ISSUES WITH imagesOfWork, portfolio, and profilePhoto
+    // in order to get this working.
+    // creative.set(creativeProfile).save().then(res => {
+    //   // success
+    //   console.log(res)
+    // }, err => {
+    //   // HError 对象
+    // })
   },
 
   /**

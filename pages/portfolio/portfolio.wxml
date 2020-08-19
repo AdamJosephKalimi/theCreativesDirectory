@@ -51,99 +51,99 @@
 
 <view wx:if="{{loggedIn == true}}">
     <view bindtap="closeNav" class="overlay {{navState}}"></view>
-    <scroll-view scroll-y="true" class="sideNav {{expandNav}}">
-        <view style="margin-bottom: 72rpx;" bindtap="navHandler">X</view>
-        <view style="text-align: center;">
-            <image class="empty-profile-image" mode="widthFix" src="/assets/landing-illustration.png" />
-            <text class="edit-profile-image-text">Edit profile picture</text>
-        </view>
-        <view>
-            <input
-                class="settingsInput"
-                name="settingsName"
-                placeholder-style="font-family: 'NewYork Black'"
-                placeholder="Name"
-                bindinput="settingsNameInput"
-            />
-        </view>
-        <view>
-            <input
-                class="settingsInput"
-                name="settingsBio"
-                placeholder-style="font-family: 'NewYork Black'"
-                placeholder="Bio"
-                bindinput="settingsBioInput"
-            />
-        </view>
-        <view>
-            <input
-                class="settingsInput"
-                name="settingsLocation"
-                placeholder-style="font-family: 'NewYork Black'"
-                placeholder="I am based in ..."
-                bindinput="settingsLocationInput"
-            />
-        </view>
-        <view>
-            <input
-                class="settingsInput"
-                name="settingsWeChatID"
-                placeholder-style="font-family: 'NewYork Black'"
-                placeholder="WeChat ID"
-                bindinput="settingsWeChatIDInput"
-            />
-        </view>
-        <view>
-            <input
-                class="settingsInput"
-                name="settingsWebURL"
-                placeholder-style="font-family: 'NewYork Black'"
-                placeholder="Website URL (optional)"
-                bindinput="settingsWebURLInput"
-            />
-        </view>
-        <text style="font-family: 'NewYork Black'; line-height: 3;">Creative area(s)</text>
-        <view class="creative-area" style="margin-bottom: 30rpx;">
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Graphic design</button>
-                <button class="button-style-f-active right-ca-button">Web design</button>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <scroll-view scroll-y="true" class="sideNav {{expandNav}}">
+            <view style="margin-bottom: 72rpx;" bindtap="navHandler">X</view>
+            <view style="text-align: center;">
+                <image class="empty-profile-image" mode="widthFix" src="{{formData.profilePhoto}}" />
+                <text class="edit-profile-image-text">Edit profile picture</text>
             </view>
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Branding</button>
-                <button class="button-style-f-active right-ca-button">Illustration</button>
+            <view>
+                <input
+                    class="settingsInput"
+                    name="settingsName"
+                    placeholder-style="font-family: 'NewYork Black'"
+                    placeholder="{{formData.name}}"
+                    value="{{formData.name}}"
+                />
             </view>
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Art direction</button>
-                <button class="button-style-f-active right-ca-button">Photography</button>
+            <view>
+                <input
+                    class="settingsInput"
+                    name="settingsBio"
+                    placeholder-style="font-family: 'NewYork Black'"
+                    placeholder="{{formData.biography}}"
+                />
             </view>
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Videography</button>
-                <button class="button-style-f-active right-ca-button">Web dev.</button>
+            <view>
+                <input
+                    class="settingsInput"
+                    name="settingsProvince"
+                    placeholder-style="font-family: 'NewYork Black'"
+                    placeholder="{{formData.province}}"
+                    value="{{formData.province}}"
+                />
             </view>
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Copywriting</button>
-                <button class="button-style-f-active right-ca-button">Product design</button>
+            <view>
+                <input
+                    class="settingsInput"
+                    name="settingsWeChatID"
+                    placeholder-style="font-family: 'NewYork Black'"
+                    placeholder="{{formData.weChatID}}"
+                />
             </view>
-            <view class="two-button-wrapper">
-                <button class="button-style-f-active">Animation</button>
-                <button class="button-style-f-active right-ca-button">Other</button>
+            <view>
+                <input
+                    class="settingsInput"
+                    name="settingsWebsiteURL"
+                    placeholder-style="font-family: 'NewYork Black'"
+                    placeholder="{{formData.websiteUrl}}"
+                    
+                />
             </view>
-        </view>
-        <view class="upload-wrapper">
-            <navigator class="upload-pdf" url="#">Upload pdf of portfolio</navigator>
-            <image class="arrow-icon" src="/assets/arrow-icon.svg" />
-        </view>
-        <text class="upload-description">-max 5 MB</text>
-        <view class="upload-wrapper">
-            <navigator class="upload-pdf" url="#">Upload image of work</navigator>
-            <image class="arrow-icon" src="/assets/arrow-icon.svg" />
-        </view>
-        <text class="upload-description">-JPEG or PNG, max, 5mb in size</text>
-        <text class="upload-description">-Up to 5 per profile page</text>
-        <button class="save-button" bindtap="createCreative">Save</button>
-        <button bindtap="openModal" class="delete-portfolio-button">Delete my portfolio</button>
-        <button class="contact-portfolio-button">Contact Us</button>
-    </scroll-view>	
+            <text style="font-family: 'NewYork Black'; line-height: 3;">Creative area(s)</text>
+            <view class="creative-area" style="margin-bottom: 30rpx;">
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Graphic design</button>
+                    <button class="button-style-f-active right-ca-button">Web design</button>
+                </view>
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Branding</button>
+                    <button class="button-style-f-active right-ca-button">Illustration</button>
+                </view>
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Art direction</button>
+                    <button class="button-style-f-active right-ca-button">Photography</button>
+                </view>
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Videography</button>
+                    <button class="button-style-f-active right-ca-button">Web dev.</button>
+                </view>
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Copywriting</button>
+                    <button class="button-style-f-active right-ca-button">Product design</button>
+                </view>
+                <view class="two-button-wrapper">
+                    <button class="button-style-f-active">Animation</button>
+                    <button class="button-style-f-active right-ca-button">Other</button>
+                </view>
+            </view>
+            <view class="upload-wrapper">
+                <navigator class="upload-pdf" url="#">Upload pdf of portfolio</navigator>
+                <image class="arrow-icon" src="/assets/arrow-icon.svg" />
+            </view>
+            <text class="upload-description">-max 5 MB</text>
+            <view class="upload-wrapper">
+                <navigator class="upload-pdf" url="#">Upload image of work</navigator>
+                <image class="arrow-icon" src="/assets/arrow-icon.svg" />
+            </view>
+            <text class="upload-description">-JPEG or PNG, max, 5mb in size</text>
+            <text class="upload-description">-Up to 5 per profile page</text>
+            <button class="save-button" form-type="submit" bindtap="createCreative">Save</button>
+            <button bindtap="openModal" class="delete-portfolio-button">Delete my portfolio</button>
+            <button class="contact-portfolio-button">Contact Us</button>
+        </scroll-view>	
+    </form>
     <view bindtap="closeDeleteModal" class="delete-overlay {{modalState}}"></view>
     <view class="delete-modal {{modalState}}">
         <text bindtap="closeDeleteModal" class="modal-exit">X</text>
