@@ -7,10 +7,10 @@
 		<button class="button-style-a-active">Browse all</button>
 		<button class="button-style-a-normal">Filter by creative area</button>
 	</view>
-	<block wx:for="{{usersDB}}" wx:for-item="user">
+	<block wx:for="{{creatives}}" wx:for-item="user">
 		<view class="card-body">
 			<view class="card-head">
-				<image class="profile-picture" src="{{user.profilePhoto}}" />
+				<image class="profile-picture" src="{{user.profileImage}}" />
 				<view class="card-head-text">
 					<text class="card-title">{{user.name}}</text>
 					<block wx:for="{{user.creativeAreas}}" wx:for-index="idx">
@@ -23,7 +23,7 @@
 					</block>
 				</view>
 			</view>
-			<text class="card-description">{{user.bio}}</text>
+			<text class="card-description">{{user.biography}}</text>
 		</view>
 	</block>
 </view>

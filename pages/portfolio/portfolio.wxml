@@ -158,7 +158,7 @@
     <view class="portfolio-wrapper-logged-in">
         <image class="profile-icon" bindtap="navHandler" src="/assets/profile-icon.svg" />
         <view class="line" />
-        <text class="username">{{userDB.name}}</text>
+        <text class="username">{{formData.name}}</text>
         <block wx:for="{{userDB.creativeAreas}}" wx:for-index="idx">
             <block wx:if="{{idx < userDB.creativeAreas.length-1}}">
                 <text decode="true" class="creativeAreas">{{item}} /&nbsp;</text>
@@ -167,14 +167,14 @@
                 <text class="creative-areas">{{item}}</text>
             </block>
         </block>
-        <text class="province">Based in <text class="bold">{{userDB.province}}</text>
+        <text class="province">Based in <text class="bold">{{formData.province}}</text>
         </text>
-        <image class="profile-image" src="{{userDB.profilePhoto}}" />
-        <text class="biography">{{userDB.biography}}
+        <image class="profile-image" src="{{formData.profilePhoto}}" />
+        <text class="biography">{{formData.biography}}
         </text>
         <view class="line-thin" />
         <view class="portfolio-image-wrapper">
-            <block wx:for="{{userDB.imagesOfWork}}" wx:for-index="idx">
+            <block wx:for="{{formData.imagesOfWork}}" wx:for-index="idx">
                 <view class="images_of_work-image">
                     <image style="width: 100%;" mode="widthFix" src="{{item}}" />
                     <image
@@ -190,7 +190,7 @@
         </view>
         <view class="line-thin" />
         <view>
-            <navigator class="button-style-e" url="#">See more: {{userDB.websiteUrl}}</navigator>
+            <navigator class="button-style-e" url="#">See more: {{formData.websiteUrl}}</navigator>
             <image class="copy-icon-style-e" src="/assets/copy-icon.svg" />
         </view>
         <view class="download-wrapper">

@@ -40,7 +40,20 @@ App({
         }
       }
     })
+
+    wx.BaaS.auth.getCurrentUser().then(user => {
+      console.log("currentUser", user)
+      console.log("openID", user.openid)
+      // user 为 currentUser 对象
+      console.log()
+    }).catch(err => {
+      // HError
+      if( err.code === 604 ){
+        console.log('用户未登录')
+      }
+    })
   },
+
   globalData: {
     userInfo: null
   }

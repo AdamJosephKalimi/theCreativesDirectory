@@ -1,3 +1,5 @@
+import utils from '../../utils/home-directory'
+
 // pages/home-directory/home-directory.js
 Page({
 
@@ -43,7 +45,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.fetchCreatives()
   },
 
   /**
@@ -93,5 +95,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  //
+  fetchCreatives() {
+    utils.getCreatives(209101670892315, (res) => {
+      console.log("Index of creatives", res.data.objects)
+      let creativesArray = res.data.objects
+      this.setData({
+        creatives: creativesArray
+      })
+    })
   }
+
 })

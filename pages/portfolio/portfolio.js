@@ -1,5 +1,11 @@
 // pages/portfolio/portfolio.js
+
+let app = getApp()
 Page({
+
+  // I want to declare a global variable (var app = getApp()) so that I can 
+  // check if userInfo is stored in globalData. This is how we'll run a check
+  // to see if the user has been created or not
 
  /**
    * Page initial data
@@ -12,8 +18,9 @@ Page({
     deleteButtonDisplay: ["none", "none", "none", "none", "none"],
 
     formData: {
+      profilePhoto: "",
       name: "Name",
-      biography: "Biography",
+      biography: "Demo",
       weChatID: "Demo",
       province: "I am based in...",
       websiteUrl: "Website URL (optional)",
@@ -25,7 +32,7 @@ Page({
 
     userDB: {
       name: "",
-      biography: "Bio",
+      biography: "test",
       province: "",
       websiteUrl: "",
       creativeAreas: ["", "", ""],
@@ -35,6 +42,40 @@ Page({
       wechatID: "",
     },
     loggedIn: false 
+  },
+
+    /**
+   * User Login
+   */
+  // This happens when a user clicks the WeChat Login button on the modal
+  userInfoHandler(data) {
+    wx.BaaS.auth.loginWithWechat(data).then(user => {
+        // Is it a bad idea to run setData in this function?
+
+        console.log("LoginWithWeChat user", user)
+
+        this.setData({
+          formData: {
+            name: data.detail.userInfo.nickName,
+            province: data.detail.userInfo.province,            
+            profilePhoto: data.detail.userInfo.avatarUrl,
+            websiteUrl: "Website URL",
+            creativeAreas: [""],
+            biography: "Bio",
+            weChatID: "WeChat ID",
+            creativeAreas: [],
+            portfolio: null,
+            imagesOfWork: null
+          },
+          loggedIn: true,
+          modalState: "hidden",
+          profile: user.toJSON()
+          
+        })
+
+      }, err => {
+        // **err 有两种情况**：用户拒绝授权，HError 对象上会包含基本用户信息：id、openid、unionid；其他类型的错误，如网络断开、请求超时等，将返回 HError 对象（详情见下方注解）
+    })
   },
 
     // Custom Functions
@@ -85,46 +126,34 @@ Page({
 
     formSubmit: function(e) {
       let value = e.detail.value
-      console.log('form triggers a submit event, carrying the following data: ', e.detail.value)
-      console.log("name", value.settingsName)
-      console.log("bio", value.settingsBio)
-      console.log("province", value.settingsProvince)
-      console.log("wechat id", value.settingsWeChatID)
-      console.log("website url", value.settingsWebsiteURL)
+      let profilePhoto = this.data.formData.profilePhoto
+      let userID = this.data.profile.id
+      console.log('form info: ', e.detail.value)
+
+      console.log("Profile", userID)
+      // These keep the placeholder text in the input fields 
+      // in the case that the user leaves the field blank
+       
+      if (value.settingsBio == "") value.settingsBio = "Bio";
+      if (value.settingsWeChatID == "") value.settingsWeChatID = "WeChat ID";
+      if (value.settingsWebsiteURL == "") value.settingsWebsiteURL = "Website URL";
+
+      this.setData({
+        formData: {
+          profilePhoto: profilePhoto,
+          name: value.settingsName,
+          biography: value.settingsBio,
+          weChatID: value.settingsWeChatID,
+          province: value.settingsProvince,
+          websiteUrl: value.settingsWebsiteURL,
+          creativeAreas: [],
+          imagesOfWork: ["/assets/portfolio-img1.png", "/assets/portfolio-img2"],
+          portfolio: null,
+          imagesOfWork: null
+        }
+      })
 
     },
-
-  /**
-   * User Login
-   */
-  // This happens when a user clicks the WeChat Login button on the modal
-  userInfoHandler(data) {
-    wx.BaaS.auth.loginWithWechat(data).then(user => {
-        // user 包含用户完整信息，详见下方描述
-        // let userDB = this.data.userDB
-
-        // Is it a bad idea to run setData in this function?
-        this.setData({
-          formData: {
-            name: data.detail.userInfo.nickName,
-            province: data.detail.userInfo.province,            
-            profilePhoto: data.detail.userInfo.avatarUrl,
-            websiteUrl: "Website URL",
-            creativeAreas: [""],
-            biography: "Bio",
-            weChatID: "WeChat ID",
-            creativeAreas: [],
-            portfolio: null,
-            imagesOfWork: null
-          },
-          loggedIn: true,
-          modalState: "hidden"
-        })
-  
-      }, err => {
-        // **err 有两种情况**：用户拒绝授权，HError 对象上会包含基本用户信息：id、openid、unionid；其他类型的错误，如网络断开、请求超时等，将返回 HError 对象（详情见下方注解）
-    })
-  },
 
   /**
    * Create creative in the backend by saving the form
@@ -133,7 +162,8 @@ Page({
     // console.log("Creative created", e);
     // create the data structure here and POST to BaaS
     
-    console.log(e)
+    console.log("searching for user info in globaldata 2: ", app.globalData)
+
 
     // let creativeProfile = this.data.formData
     // console.log("creativeProfile", creativeProfile)
@@ -147,6 +177,7 @@ Page({
     // creative.set("websiteUrl", creativeProfile.websiteUrl)
     // creative.set("profileImage", creativeProfile.profilePhoto)
     // creative.set("creativeAreas", creativeProfile.creativeAreas)
+    // creative.set("openID", creativeProfile.creativeAreas)
 
     // This was a demo to test sending the img URL to the backend 
     // (It works, but the question is "Do I want to send the URL
@@ -187,6 +218,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    // WeChat user info is saved to global data at the point of submittin the form
+    console.log("searching for user info in globaldata 1: ", app.globalData)
 
   },
 
